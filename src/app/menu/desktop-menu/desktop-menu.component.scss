@@ -1,0 +1,15 @@
+@import '../../../variables.scss';
+
+:host {
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  @media screen and (max-width: $max-mobile){
+    display: none;
+  }
+}
