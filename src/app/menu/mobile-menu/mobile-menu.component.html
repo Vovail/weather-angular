@@ -1,0 +1,16 @@
+<button
+  mat-icon-button
+  [matMenuTriggerFor]="mobileMenu"
+  aria-label="mobile menu trigger"
+>
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #mobileMenu="matMenu">
+  <a
+    *ngFor="let item of menu"
+    mat-menu-item
+    [routerLink]="item.path"
+    routerLinkActive="active-link"
+    >{{ item.label }}</a
+  >
+</mat-menu>

@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.weather-toolbar {
+  &-row {
+    justify-content: space-between;
+  }
+
+  &-title {
+    align-items: center;
+
+    span {
+      margin-left: 5px;
+    }
+
+    .mat-icon {
+      @media screen and (max-width: $max-mobile) {
+        display: none;
+      }
+    }
+  }
+}

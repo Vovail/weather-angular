@@ -1,0 +1,9 @@
+@import '../../../variables.scss';
+
+:host {
+  display: none;
+
+  @media screen and (max-width: $max-mobile) {
+    display: block;
+  }
+}
