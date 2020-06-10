@@ -13,12 +13,19 @@ import { AppComponent } from './app.component';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { MobileMenuComponent } from './menu/mobile-menu/mobile-menu.component';
-import { DesktopMenuComponent } from './menu/desktop-menu/desktop-menu.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MobileMenuComponent } from './components/menu/mobile-menu/mobile-menu.component';
+import { DesktopMenuComponent } from './components/menu/desktop-menu/desktop-menu.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { TodayComponent } from './today/today.component';
 
 @NgModule({
-  declarations: [AppComponent, MobileMenuComponent, DesktopMenuComponent, ToolbarComponent],
+  declarations: [
+    AppComponent,
+    MobileMenuComponent,
+    DesktopMenuComponent,
+    ToolbarComponent,
+    TodayComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
