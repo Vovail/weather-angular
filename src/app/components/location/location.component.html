@@ -15,7 +15,8 @@
       [displayWith]="displayName"
     >
       <mat-option *ngFor="let option of suggestions$ | async" [value]="option">
-        {{ option.displayName }} ({{ option.adminDistrict }})
+        {{ option.displayName }}
+        {{ option.adminDistrict && "(" + option.adminDistrict + ")" }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>

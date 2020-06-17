@@ -60,7 +60,7 @@ export interface ILocationSuggestion {
 }
 
 export interface ILocationsApiData {
-  location: ILocationSuggestion;
+  location: ILocationsData;
 }
 
 interface ISelectedLocation {
