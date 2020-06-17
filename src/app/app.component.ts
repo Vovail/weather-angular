@@ -1,4 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { selectLocationName } from './store/location/location.reducer';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +10,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'weather-angular';
+  locationName$: Observable<string>;
+
+  constructor(private store: Store) {
+    this.locationName$ = store.pipe(select(selectLocationName));
+  }
 }
