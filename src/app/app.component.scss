@@ -1,1 +1,19 @@
+@import "../variables.scss";
 
+.location-container {
+  justify-content: space-between;
+  align-items: center;
+
+  > h1 {
+    margin: 0;
+  }
+
+  @media screen and (max-width: $max-mobile) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    h1 {
+        margin-bottom: 5px;
+    }
+  }
+}

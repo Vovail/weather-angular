@@ -1,4 +1,10 @@
 <div class="weather-root">
-<we-toolbar></we-toolbar>
-<router-outlet></router-outlet>
+  <we-toolbar></we-toolbar>
+  <main>
+    <div class="df location-container">
+      <h1>{{ locationName$ | async }}</h1>
+      <we-location></we-location>
+    </div>
+    <router-outlet></router-outlet>
+  </main>
 </div>

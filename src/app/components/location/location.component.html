@@ -1,0 +1,23 @@
+<form class="search-location-form" [formGroup]="searchLocationForm">
+  <mat-form-field class="autocomplete-wrapper">
+    <input
+      type="text"
+      placeholder="Search location"
+      aria-label="Search Locations"
+      matInput
+      formControlName="search"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      (optionSelected)="selectLocation($event)"
+      [displayWith]="displayName"
+    >
+      <mat-option *ngFor="let option of suggestions$ | async" [value]="option">
+        {{ option.displayName }}
+        {{ option.adminDistrict && "(" + option.adminDistrict + ")" }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
